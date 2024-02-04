@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "commit" : "git add . && git commit -m '$commitMessage'",
-    "push" : "git push origin main"
+    "lint": "next lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
