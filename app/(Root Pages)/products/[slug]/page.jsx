@@ -1,12 +1,15 @@
 // "use client"
-
 import { getSingleProduct } from "@/utils/CRUD/products"
+import Link from "next/link"
 
 const ProductDetails = async ({ params }) => {
     const { slug } = params
-    await getSingleProduct(slug)
+    // const router = useRouter()
+    const result = await getSingleProduct(slug)
+    const product = result.data
     return (
         <div className="py-8">
+            <Link href={"/fasfas"}>faasfas</Link>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row -mx-4">
                     <div className="md:flex-1 px-4">

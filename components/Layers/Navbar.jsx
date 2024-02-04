@@ -8,6 +8,7 @@ import { FaBars } from "react-icons/fa"
 import { LiaTimesSolid } from "react-icons/lia";
 import ThemeSwither from "../smallUI/ThemeSwither"
 import useScrollTrack from "@/hooks/useScrollTrack"
+import { FaCartShopping } from "react-icons/fa6"
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false)
@@ -56,7 +57,10 @@ const Navbar = () => {
                         ))
                     }
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+                    <Link title="My Cart" href={"/my-cart"} className="text-xl mx-2 ">
+                        <FaCartShopping />
+                    </Link>
                     <ThemeSwither />
                     <NavLink href="/auth"
                         className="text-sm font-semibold leading-6 " activeClassName="text-link">Log in</NavLink>

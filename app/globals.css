@@ -3,14 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  body {
-    @apply text-site bg-back;
-  }
   .bg-front {
-    @apply bg-white dark:bg-gray-900;
+    @apply bg-white dark:bg-zinc-900;
   }
   .bg-back {
-    @apply bg-[#fdfdfd] dark:bg-gray-800;
+    @apply bg-[#fdfdfd] dark:bg-zinc-800;
   }
   .text-site {
     @apply text-gray-900 dark:text-gray-100;

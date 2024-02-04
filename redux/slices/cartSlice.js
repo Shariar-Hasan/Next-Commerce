@@ -58,10 +58,10 @@ export const cartSlice = createSlice({
         };
       }
     },
-    removeFromCart: (state, action) => {
-      const { product } = action.payload;
+    removeFromCart: (state, { payload }) => {
+      const { product } = payload;
       const cartProduct = state.cartItems.find(
-        (item) => item.id !== product.id
+        (item) => item.id === product.id
       );
       const newCartItems = state.cartItems.filter(
         (item) => item.id !== product.id
@@ -105,7 +105,9 @@ export const cartSlice = createSlice({
       const newCartItems = state.cartItems.map((item) =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
-      const newTotalPrice = state.totalPrice + product.price;
+      const newTotalPrice =
+        state.totalPrice +
+        (product.discountPrice ? product.discountPrice : product.regularPrice);
 
       // setting in local storage and in state
       set(localStoreNames.cart, newCartItems);
@@ -125,7 +127,11 @@ export const cartSlice = createSlice({
         const newCartItems = state.cartItems.filter(
           (item) => item.id !== product.id
         );
-        const newTotalPrice = state.totalPrice - product.price;
+        const newTotalPrice =
+          state.totalPrice -
+          (product.discountPrice
+            ? product.discountPrice
+            : product.regularPrice);
 
         // setting in local storage and in state
         set(localStoreNames.cart, newCartItems);
@@ -141,7 +147,11 @@ export const cartSlice = createSlice({
             ? { ...item, quantity: item.quantity - 1 }
             : item
         );
-        const newTotalPrice = state.totalPrice - product.price;
+        const newTotalPrice =
+          state.totalPrice -
+          (product.discountPrice
+            ? product.discountPrice
+            : product.regularPrice);
 
         // setting in local storage and in state
         set(localStoreNames.cart, newCartItems);

@@ -8,6 +8,7 @@ import { FaCartArrowDown, FaArrowRight, } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '@/redux/slices/cartSlice'
+import toast from 'react-hot-toast'
 
 const ProductCard = ({ product }) => {
     const {
@@ -50,7 +51,10 @@ const ProductCard = ({ product }) => {
                 </p>
                 {/* Footer buttons */}
                 <div className='text-sm flex justify-between flex-wrap mt-1'>
-                    <button onClick={() => dispatch(addToCart({ product }))} className='flex items-center px-2 py-1  gap-x-2 bg-primary-600 border-2 border-primary-600 hover:bg-transparent rounded text-white hover:text-inherit'>
+                    <button onClick={() => {
+                        dispatch(addToCart({ product }))
+                        toast.success("product added to cart")
+                    }} className='flex items-center px-2 py-1  gap-x-2 bg-primary-600 border-2 border-primary-600 hover:bg-transparent rounded text-white hover:text-inherit'>
                         Add to cart <FaCartArrowDown />
                     </button >
                     <button onClick={() => router.push(`/products/${slug}`)} className='flex items-center px-2 py-1  gap-x-2 bg-primary-600 border-2 border-primary-600 hover:bg-transparent rounded text-white hover:text-inherit'>
