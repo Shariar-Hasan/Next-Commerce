@@ -21,10 +21,10 @@ const Navbar = () => {
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">{companyInfo?.name}</span>
                         <Image
-                        width={32} 
-                        height={32} 
-                        className="h-auto" 
-                        src={companyInfo?.logo?.src} alt={companyInfo?.name} />
+                            width={32}
+                            height={32}
+                            className="h-auto"
+                            src={companyInfo?.logo?.src} alt={companyInfo?.name} />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -54,7 +54,8 @@ const Navbar = () => {
                     }
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <NavLink href="/login" className="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></NavLink>
+                    <NavLink href="/login"
+                        className="text-sm font-semibold leading-6 " activeClassName="text-link">Log in</NavLink>
                 </div>
             </nav>
             {/* Mobile Version Navbar */}
