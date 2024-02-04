@@ -22,7 +22,7 @@ export const navRoutes = [
   },
   {
     name: "Contact",
-    path: "/",
+    path: "/contact",
     isFooterItem: true,
     isNavItem: true,
   },

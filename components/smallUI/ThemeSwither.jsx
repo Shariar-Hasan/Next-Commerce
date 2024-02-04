@@ -9,7 +9,7 @@ const ThemeSwither = () => {
     const dispatch = useDispatch()
     return (
         <button
-            className="text-xl"
+            className="text-xl mx-2"
             onClick={() => dispatch(toggleTheme())}
         >
             {isDark ? <FaSun /> : <FaMoon />}

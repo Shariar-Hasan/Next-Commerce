@@ -9,7 +9,7 @@ const Footer = () => {
                 <nav className="flex flex-wrap justify-center -mx-5 -my-2">
                     {
                         navRoutes?.map(({ name, path, isFooterItem }) => isFooterItem && <div key={name} className="px-5 py-2">
-                            <Link href={path} className="text-base leading-6 opacity-75">
+                            <Link key={name} href={path} className="text-base leading-6 opacity-75">
                                 {name}
                             </Link>
                         </div>)
@@ -19,6 +19,7 @@ const Footer = () => {
                     {
                         socialLinks?.map(({ icon, link, title }) =>
                             <a
+                                key={title}
                                 href={link}
                                 className="text-gray-400 hover:text-gray-500"
                                 title={title}

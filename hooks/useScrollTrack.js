@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const useScrollTrack = () => {
+const useScrollTrack = (height) => {
   const [isScrollLimitReached, setIsScrollLimitReached] = useState(
     window.scrollY >= height
   );
