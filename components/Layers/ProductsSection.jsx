@@ -1,6 +1,4 @@
 import { getProducts } from "@/utils/CRUD/products"
-import { numToBdt } from "@/utils/converters"
-import Image from "next/image"
 import ProductCard from "../cards/ProductCard"
 import Heading from "../smallUI/Heading"
 import Link from "next/link"
@@ -8,7 +6,7 @@ import Link from "next/link"
 const ProductsSection = async () => {
 
     const result = await getProducts()
-    const products = result.data.slice(0, 5)
+    const products = result?.data?.slice(0, 5)
     return (
         <div className="max-w-7xl mx-auto my-10 ">
             <Heading >

@@ -30,7 +30,7 @@ const Footer = () => {
                     }
                 </div>
                 <p className="mt-8 text-base leading-6 text-center text-gray-400">
-                    © {new Date().getFullYear()} {companyInfo?.name}, All rights reserved || Developed by <a className='text-primary-300' href={companyInfo?.developer.link}>{companyInfo?.developer.name}</a>
+                    © {new Date().getFullYear()} {companyInfo?.name}, All rights reserved || Developed by <a className='text-primary-300' href={companyInfo?.developer.link}>{companyInfo?.developer?.title}</a>
                 </p>
             </div>
         </section>

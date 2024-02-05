@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .bg-frontr {
+  .bg-front {
     @apply bg-white dark:bg-gray-800;
   }
   .bg-back {

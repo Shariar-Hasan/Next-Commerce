@@ -34,13 +34,12 @@ const CartTable = () => {
                     <tbody>
                         {
                             cartItems?.length > 0
-                                ? cartItems?.map((product) => {
+                                ? cartItems?.map((product,i) => {
                                     const { title, quantity, regularPrice, discountPrice, thumbnail } = product
-                                    return <tr className='text-center'>
+                                    return <tr key={i} className='text-center'>
                                         <td className='text-left  py-3 px-2'>
                                             <div className="flex w-2/5">
                                                 <div className="hidden md:inline-block  relative">
-                                                    {/* <Image width={700} height={700} className="w-[100px]" src={thumbnail} alt={title} /> */}
                                                     <img className="w-[100px]" src={thumbnail} alt={title} />
                                                 </div>
                                                 <div className="flex flex-col justify-between ml-4 flex-grow">
@@ -58,7 +57,7 @@ const CartTable = () => {
                                                         <FaMinus />
                                                     </button>
 
-                                                    <input className="mx-2 border text-center w-8" type="text" readOnly value={quantity} defaultValue={quantity} />
+                                                    <input className="mx-2 border text-center w-8" type="text" readOnly value={quantity}  />
                                                     <button onClick={() => dispatch(incrementQuantity({ product }))} >
                                                         <FaPlus />
                                                     </button>

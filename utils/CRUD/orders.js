@@ -6,6 +6,8 @@ export const createNewOrder = async (orderData) => {
     },
     body: JSON.stringify(orderData),
   });
+
+    console.log(process.env.FETCH_URL)
   const data = await result.json();
   return data;
 };

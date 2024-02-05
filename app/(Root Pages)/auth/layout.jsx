@@ -1,4 +1,3 @@
-import Image from "next/image"
 
 const AuthLayout = ({ children }) => {
     console.log("auth layout")

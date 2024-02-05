@@ -1,6 +1,5 @@
 export const getProducts = async () => {
   const res = await fetch(`${process.env.FETCH_URL}/api/products/`, {
-    cache: "force-cache",
     next: {
       revalidate: 3600,
     },
@@ -10,7 +9,6 @@ export const getProducts = async () => {
 };
 export const getSingleProduct = async (slug) => {
   const res = await fetch(`${process.env.FETCH_URL}/api/products/${slug}`, {
-    cache: "force-cache",
     next: {
       revalidate: 3600,
     },
