@@ -13,7 +13,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
             <div className="flex flex-col h-full  w-[100vw] sm:w-[300px]">
                 {/* Top section */}
                 <div className="py-4 px-2 flex justify-between ">
-                    <Image width={100} height={100} src={companyInfo?.logo.src} alt={companyInfo?.name} className="max-w-[50px] w-full" />
+                    <Image width={100} height={100} src={companyInfo?.logo.src} alt={companyInfo?.title} className="max-w-[50px] w-full" />
                     <button
                         onClick={() => setIsSidebarOpen(false)}>
                         <IoMdClose className="text-2xl" />

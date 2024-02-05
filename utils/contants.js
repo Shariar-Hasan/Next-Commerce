@@ -121,3 +121,7 @@ export const dashboardRoutes = [
     icon: <FaCartPlus />,
   },
 ];
+const isLocal = true;
+export const rootURL = isLocal
+  ? "http://localhost:3000"
+  : "https://next-ecommerce-pro.vercel.app";

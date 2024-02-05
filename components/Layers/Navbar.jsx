@@ -14,9 +14,6 @@ import CartIcon from "../smallUI/CartIcon"
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false)
     const isNavShadowVisible = useScrollTrack(100)
-    useEffect(() => {
-        console.log(isNavOpen)
-    }, [isNavOpen])
     const toggleNavOpening = () => {
         setIsNavOpen(prev => !prev)
     }
@@ -25,12 +22,12 @@ const Navbar = () => {
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
-                        <span className="sr-only">{companyInfo?.name}</span>
+                        <span className="sr-only">{companyInfo?.title}</span>
                         <Image
                             width={32}
                             height={32}
                             className="h-auto"
-                            src={companyInfo?.logo?.src} alt={companyInfo?.name} />
+                            src={companyInfo?.logo?.src} alt={companyInfo?.title} />
                     </Link>
                 </div>
 
@@ -72,13 +69,13 @@ const Navbar = () => {
                     <div className="flex items-center justify-between">
                         {/* Logo  */}
                         <Link href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">{companyInfo?.name}</span>
+                            <span className="sr-only">{companyInfo?.title}</span>
                             <Image
                                 width={32}
                                 height={32}
                                 className=" w-auto"
                                 src={companyInfo?.logo?.src}
-                                alt={companyInfo?.name} />
+                                alt={companyInfo?.title} />
                         </Link>
                         {/* Close button for Mobile Nav */}
                         <button

@@ -1,5 +1,7 @@
+import { rootURL } from "../contants";
+
 export const createNewOrder = async (orderData) => {
-  const result = await fetch(`${process.env.FETCH_URL}/api/orders`, {
+  const result = await fetch(`${rootURL}/api/orders`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -7,7 +9,7 @@ export const createNewOrder = async (orderData) => {
     body: JSON.stringify(orderData),
   });
 
-    console.log(process.env.FETCH_URL)
+    console.log(process.env.NEXT_PUBLIC_FETCH_URL)
   const data = await result.json();
   return data;
 };
