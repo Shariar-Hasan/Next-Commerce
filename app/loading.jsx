@@ -7,7 +7,6 @@ const RootLoading = () => {
           NEXT COMMERCE
         </h1>
       </div>
-
     </div>
   )
 }

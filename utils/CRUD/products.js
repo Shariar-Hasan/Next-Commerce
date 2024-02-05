@@ -7,6 +7,7 @@ export const getProducts = async () => {
     },
   });
   const result = await res.json();
+  console.log({result})
   return result;
 };
 export const getSingleProduct = async (slug) => {
@@ -14,7 +15,7 @@ export const getSingleProduct = async (slug) => {
     next: {
       revalidate: 3600,
     },
-  });
+  }); 
   const result = await res.json();
   if (!result.success) {
     throw new Error(result.message);

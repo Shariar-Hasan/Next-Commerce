@@ -1,15 +1,16 @@
+import { NextResponse } from "next/server";
 import dataJson from "./../data.json";
 export const GET = (req, { params }) => {
   const { slug: pSlug } = params;
   const data = dataJson.find(({ slug }) => pSlug === slug);
   if (data) {
-    return Response.json({
+    return NextResponse.json({
       success: true,
       data: data,
     });
   }
   else{
-    return Response.json({
+    return NextResponse.json({
       success: false,
       message: "Product not found"
     })
