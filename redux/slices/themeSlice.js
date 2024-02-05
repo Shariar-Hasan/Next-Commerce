@@ -1,6 +1,14 @@
-import { get } from "@/utils/localStorage";
 import { createSlice } from "@reduxjs/toolkit";
-
+const get = (name) => {
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage?.getItem(name));
+  }
+};
+const set = (name, item) => {
+  if (typeof window !== "undefined") {
+    localStorage?.setItem(name, JSON.stringify(item));
+  }
+};
 export const themeSlice = createSlice({
   name: "theme",
   initialState: {
@@ -14,11 +22,11 @@ export const themeSlice = createSlice({
       } else {
         document.body.classList.add("dark");
       }
-      localStorage.setItem("isDark", state.isDark);
+      set("isDark", state.isDark);
     },
   },
 });
 
 export const { toggleTheme } = themeSlice.actions;
 
-export const selectTheme = (state) => state.theme.isDark;
+export default themeSlice.reducer;

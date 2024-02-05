@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { useSelector } from "react-redux";
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {

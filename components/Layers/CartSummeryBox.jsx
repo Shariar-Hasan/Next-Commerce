@@ -1,9 +1,15 @@
+"use client"
 import { numToBdt } from '@/utils/converters'
 import React from 'react'
 import LinkButton from '../smallUI/LinkButton'
+import { useSelector } from 'react-redux'
 
-const CartSummeryBox = ({ cartItems, totalPrice }) => {
-    let shippingCost = cartItems.length > 0 ? 100 : 0
+const CartSummeryBox = () => {
+    const {
+        cartItems,
+        totalPrice,
+        shippingCost
+    } = useSelector(state => state.cart)
     return (
         <div>
             <h1 className="font-semibold text-2xl border-b pb-8">Order Summary</h1>
@@ -20,9 +26,12 @@ const CartSummeryBox = ({ cartItems, totalPrice }) => {
                 <span className="font-semibold text-sm">{numToBdt(totalPrice + shippingCost)}</span>
 
             </div>
-            <LinkButton href='/checkout' className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
-                Checkout
-            </LinkButton>
+            {
+                cartItems?.length > 0 &&
+                <LinkButton href="/checkout">
+                    Checkout
+                </LinkButton>
+            }
         </div>
     )
 }

@@ -1,7 +1,10 @@
 
-const ProductLayout = () => {
+const ProductLayout = ({ children }) => {
     return (
-        <div>ProductLayout</div>
+        <div>
+            {/* will implement Filter Section  */}
+            {children}
+        </div>
     )
 }
 

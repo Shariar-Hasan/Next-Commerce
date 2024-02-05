@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
     return (
         // /Card Section
         <div className="min-h-32 bg-front border dark:border-0 mx-auto relative rounded-md hover:shadow-xl cursor-pointer duration-200">
-            {discountPrice && regularPrice !== 0 && <span className="bg-primary-600 text-white px-2 py-1 absolute top-0 right-0 text-xs  md:text-sm rounded-bl-md">
+            {discountPrice && regularPrice !== 0 && <span className="bg-primary-600 text-white px-2 py-1 absolute top-0 right-0 text-xs  md:tex t-sm rounded-bl-md">
                 {(((regularPrice - discountPrice) / regularPrice) * 100).toFixed(1)} % discount
             </span>}
             <div className="overflow-hidden p-2 rounded-md">
@@ -50,7 +50,7 @@ const ProductCard = ({ product }) => {
                     }
                 </p>
                 {/* Footer buttons */}
-                <div className='text-sm flex justify-between flex-wrap mt-1'>
+                <div className='text-xs flex justify-between flex-wrap mt-1'>
                     <button onClick={() => {
                         dispatch(addToCart({ product }))
                         toast.success("product added to cart")

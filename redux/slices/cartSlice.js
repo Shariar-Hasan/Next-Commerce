@@ -1,6 +1,14 @@
-import { get, set } from "@/utils/localStorage";
 import { createSlice } from "@reduxjs/toolkit";
-
+const get = (name) => {
+  if (typeof window !== "undefined") {
+    return JSON.parse(localStorage?.getItem(name));
+  }
+};
+const set = (name, item) => {
+  if (typeof window !== "undefined") {
+    localStorage?.setItem(name, JSON.stringify(item));
+  }
+};
 const localStoreNames = {
   cart: "cart",
   cartTotalPrice: "cartTotalPrice",
@@ -10,6 +18,7 @@ export const cartSlice = createSlice({
   initialState: {
     cartItems: get(localStoreNames.cart) || [],
     totalPrice: get(localStoreNames.cartTotalPrice) || 0,
+    shippingCost: 100,
   },
   reducers: {
     addToCart: (state, { payload }) => {
@@ -76,10 +85,12 @@ export const cartSlice = createSlice({
       // setting in local storage and in state
       set(localStoreNames.cart, newCartItems);
       set(localStoreNames.cartTotalPrice, newTotalPrice);
+
       return {
         ...state,
         cartItems: newCartItems,
         totalPrice: newTotalPrice,
+        shippingCost: newCartItems.length > 0 ? 100 : 0,
       };
     },
     // updateQuantity: (state, { payload }) => {
@@ -140,6 +151,7 @@ export const cartSlice = createSlice({
           ...state,
           cartItems: newCartItems,
           totalPrice: newTotalPrice,
+          shippingCost: newCartItems.length > 0 ? 100 : 0,
         };
       } else {
         const newCartItems = state.cartItems.map((item) =>

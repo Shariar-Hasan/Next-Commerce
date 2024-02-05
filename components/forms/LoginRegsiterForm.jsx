@@ -62,6 +62,9 @@ const LoginRegsiterForm = () => {
                         required
                         type="password"
                     />
+                    {isLogin && <div className="flex justify-end">
+                        <Link className="text-link text-xs" href={"/forget-password"}>Forgot password?</Link>
+                    </div>}
                     {
                         !isLogin &&
                         <Input
