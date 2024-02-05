@@ -1,5 +1,5 @@
 export const createNewOrder = async (orderData) => {
-  const result = await fetch(`http://localhost:3000/api/orders`, {
+  const result = await fetch(`${process.env.FETCH_URL}/api/orders`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
