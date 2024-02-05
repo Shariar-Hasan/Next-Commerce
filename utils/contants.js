@@ -98,25 +98,25 @@ export const navRoutes = [
 export const dashboardRoutes = [
   {
     title: "Order List",
-    path: "order-list",
+    path: "dashboard/order-list",
     isDashboardRoute: true,
     icon: <FaCartPlus />,
   },
   {
     title: "Product List",
-    path: "product-list",
+    path: "dashboard/product-list",
     isDashboardRoute: true,
     icon: <LuPackageOpen />,
   },
   {
     title: "User List",
-    path: "user-list",
+    path: "dashboard/user-list",
     isDashboardRoute: true,
     icon: <FaUserAlt />,
   },
   {
     title: "Add Product",
-    path: "add-product",
+    path: "dashboard/add-product",
     isDashboardRoute: true,
     icon: <FaCartPlus />,
   },

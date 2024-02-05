@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/smallUI/ScrollToTop";
 
 export default function RootLayout({ children }) {
   return (
-    <div className="bg-back">
+    <div className="bg-back-gradient">
       <Navbar />
       {children}
       <Footer />

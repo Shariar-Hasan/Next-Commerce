@@ -24,11 +24,11 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen }) => {
                     <DashboardNavSection
                         topic="Site Navigation"
                         routeList={navRoutes.filter(({ isDashboardRoute }) => isDashboardRoute)}
-                        prefixSlash="/"
                     />
                     <DashboardNavSection
                         topic="Dashboard Navigation"
                         routeList={dashboardRoutes}
+                        prefixSlash="/"
                     />
 
                 </div>

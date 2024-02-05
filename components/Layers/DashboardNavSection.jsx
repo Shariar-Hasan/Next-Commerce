@@ -3,6 +3,7 @@ import NavLink from "../smallUI/NavLink"
 const DashboardNavSection = ({
     topic = "",
     routeList = [],
+    prefixSlash=""
 }) => {
     return (
         <>
@@ -13,8 +14,7 @@ const DashboardNavSection = ({
                     key={i}
                     className={`hover:bg-gray-400/50 duration-200 rounded-md py-2 flex items-center gap-x-3 md:text-base text-sm px-5 my-1`}
                     activeClassName="bg-gray-400/20"
-                    href={`${path}`}
-                    end
+                    href={`${prefixSlash}${path}`}
                 >
                     {icon}
                     <span>{title}</span>
