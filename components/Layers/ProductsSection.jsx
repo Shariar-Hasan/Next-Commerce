@@ -10,7 +10,7 @@ const ProductsSection = async () => {
     const result = await getProducts()
     const products = result.data.slice(0, 5)
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto my-10">
             <Heading >
                 Product Listings
             </Heading>

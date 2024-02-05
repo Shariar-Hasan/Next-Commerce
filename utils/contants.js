@@ -1,47 +1,18 @@
-import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import logo from "./../view/logo.png"
+import {
+  FaCartPlus,
+  FaFacebook,
+  FaHome,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaUserAlt,
+} from "react-icons/fa";
+import { LuPackageOpen } from "react-icons/lu";
+import logo from "./../view/logo.png";
 import { FaSquareXTwitter } from "react-icons/fa6";
-export const navRoutes = [
-  {
-    name: "Home",
-    path: "/",
-    isFooterItem: true,
-    isNavItem: true,
-  },
-  {
-    name: "Dashboard",
-    path: "/dashboard",
-    isFooterItem: true,
-    isNavItem: true,
-  },
-  {
-    name: "Products",
-    path: "/products",
-    isFooterItem: true,
-    isNavItem: true,
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-    isFooterItem: true,
-    isNavItem: true,
-  },
-  {
-    name: "Login",
-    path: "/login",
-    isFooterItem: true,
-    isNavItem: false,
-  },
-  {
-    name: "Register",
-    path: "/register",
-    isFooterItem: true,
-    isNavItem: false,
-  },
-];
+import { IoIosSpeedometer } from "react-icons/io";
 
 export const companyInfo = {
-  name: "Next Ecommerce",
+  title: "Next Ecommerce",
   logo: logo,
   description:
     "Next Ecommerce is a modern ecommerce template built with Tailwind CSS and Next.js by Shariar Hasan",
@@ -51,7 +22,7 @@ export const companyInfo = {
   copyRightFrom: "2024",
   email: "shahriar.hasan.@gmail.com",
   developer: {
-    name: "Shariar Hasan",
+    title: "Shariar Hasan",
     link: "http://github.com/shariar.hasan",
   },
 };
@@ -76,5 +47,77 @@ export const socialLinks = [
     title: "LinkedIn",
     link: "https://linkedin.com",
     icon: <FaLinkedin />,
+  },
+];
+export const navRoutes = [
+  {
+    title: "Home",
+    path: "/",
+    isDashboardRoute: true,
+    isFooterItem: true,
+    isNavItem: true,
+    icon: <FaHome />,
+  },
+  {
+    title: "Dashboard",
+    path: "/dashboard",
+    isDashboardRoute: true,
+    isFooterItem: true,
+    isNavItem: true,
+    icon: <IoIosSpeedometer />,
+  },
+  {
+    title: "Products",
+    path: "/products",
+    isDashboardRoute: false,
+    isFooterItem: true,
+    isNavItem: true,
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    isDashboardRoute: false,
+    isFooterItem: true,
+    isNavItem: true,
+  },
+  {
+    title: "Login",
+    path: "/login",
+    isDashboardRoute: false,
+    isFooterItem: true,
+    isNavItem: false,
+  },
+  {
+    title: "Register",
+    path: "/register",
+    isDashboardRoute: false,
+    isFooterItem: true,
+    isNavItem: false,
+  },
+];
+export const dashboardRoutes = [
+  {
+    title: "Order List",
+    path: "order-list",
+    isDashboardRoute: true,
+    icon: <FaCartPlus />,
+  },
+  {
+    title: "Product List",
+    path: "product-list",
+    isDashboardRoute: true,
+    icon: <LuPackageOpen />,
+  },
+  {
+    title: "User List",
+    path: "user-list",
+    isDashboardRoute: true,
+    icon: <FaUserAlt />,
+  },
+  {
+    title: "Add Product",
+    path: "add-product",
+    isDashboardRoute: true,
+    icon: <FaCartPlus />,
   },
 ];

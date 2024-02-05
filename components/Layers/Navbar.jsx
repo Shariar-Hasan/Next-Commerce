@@ -45,14 +45,14 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {
-                        navRoutes.map(({ path, name, isNavItem }) => (
+                        navRoutes.map(({ path, title, isNavItem }) => (
                             isNavItem && <NavLink
-                                key={name}
+                                key={title}
                                 href={path}
                                 className={"text-sm font-semibold leading-6 "}
                                 activeClassName="text-link"
                             >
-                                {name}
+                                {title}
                             </NavLink>
                         ))
                     }
@@ -96,13 +96,13 @@ const Navbar = () => {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {
-                                    navRoutes?.map(({ name, path, isNavItem }) => isNavItem &&
+                                    navRoutes?.map(({ title, path, isNavItem }) => isNavItem &&
                                         <NavLink
-                                            key={name}
+                                            key={title}
                                             href={path}
                                             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                             activeClassName="text-link">
-                                            {name}
+                                            {title}
                                         </NavLink>)
                                 }
                             </div>

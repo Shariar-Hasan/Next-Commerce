@@ -8,7 +8,7 @@ const Products = async () => {
   const result = await getProducts()
   const products = result.data
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto my-10">
       <Heading>
         Product Shop
       </Heading>

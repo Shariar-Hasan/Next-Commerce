@@ -2,6 +2,7 @@ import parse from 'html-react-parser';
 import { getSingleProduct } from "@/utils/CRUD/products"
 import { numToBdt } from "@/utils/converters"
 import Image from "next/image"
+import AddToCartButton from '@/components/smallUI/AddToCartButton';
 
 const ProductDetails = async ({ params }) => {
     const { slug } = params
@@ -9,7 +10,7 @@ const ProductDetails = async ({ params }) => {
     const product = result.data
     const {
         title,
-        description,
+        description = "",
         shortDescription,
         images,
         thumbnail,
@@ -39,7 +40,7 @@ const ProductDetails = async ({ params }) => {
                                     discountPrice
                                         ? <span className=" flex ml-1 gap-2">
                                             <del>{numToBdt(regularPrice)}</del>
-                                            <span>{numToBdt(discountPrice)}</span>
+                                            <span className='font-semibold'>{numToBdt(discountPrice)}</span>
                                         </span>
                                         : <span className="text-gray-600 dark:text-gray-300">
                                             {numToBdt(regularPrice)}
@@ -66,12 +67,15 @@ const ProductDetails = async ({ params }) => {
                             <div className="flex items-center mt-2">
                                 {
                                     variants?.map((variant) => <button
-                                    key={variant} className="bg-back first:rounded-l-md last:rounded-r-md border px-4 py-1 duration-200 hover:bg-primary-300">
+                                        key={variant} className="bg-back first:rounded-l-md last:rounded-r-md border px-4 py-1 duration-200 hover:bg-primary-300">
                                         {variant}
                                     </button>
                                     )
                                 }
                             </div>
+                        </div>
+                        <div className="mb-4">
+                            <AddToCartButton product={product} />
                         </div>
                         <div>
                             <span className="font-bold text-gray-700 dark:text-gray-300">Product Description:</span>

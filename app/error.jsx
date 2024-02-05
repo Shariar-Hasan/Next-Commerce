@@ -1,9 +1,10 @@
 "use client"
 
+import Button from "@/components/smallUI/Button"
 import LinkButton from "@/components/smallUI/LinkButton"
 import { useRouter } from "next/navigation"
 
-const error = ({ error }) => {
+const error = ({ error, reset }) => {
   const router = useRouter()
   return (
     <div className="flex justify-center items-center w-[100vw] h-[100vh]">
@@ -12,6 +13,9 @@ const error = ({ error }) => {
         <LinkButton href="/">
           Back to Home
         </LinkButton>
+        <Button handleClick={() => reset()}>
+          Retry
+        </Button>
       </div>
 
     </div>

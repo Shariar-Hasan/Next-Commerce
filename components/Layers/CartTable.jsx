@@ -18,7 +18,7 @@ const CartTable = () => {
     const pathname = usePathname()
     const isCheckoutPage = pathname === '/checkout'
     return (
-        <div className='bg-front md:p-10 p-4 rounded-lg '>
+        <div className='bg-front md:p-10 p-4 rounded-lg shadow-md'>
             <div className="overflow-x-auto w-full">
                 <table className='w-full'>
 
@@ -90,6 +90,13 @@ const CartTable = () => {
 
                     </tbody>
                 </table>
+                {
+                    isCheckoutPage && <div className='border-t-2 flex flex-wrap justify-between font-bold'>
+                        <span>Total</span>
+                        <span>{numToBdt(totalPrice + shippingCost)}</span>
+                    </div>
+                }
+
             </div>
             {/* <div className='overflow-x-auto'>
                 {

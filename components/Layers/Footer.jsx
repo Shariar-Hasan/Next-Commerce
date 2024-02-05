@@ -8,9 +8,9 @@ const Footer = () => {
             <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
                 <nav className="flex flex-wrap justify-center -mx-5 -my-2">
                     {
-                        navRoutes?.map(({ name, path, isFooterItem }) => isFooterItem && <div key={name} className="px-5 py-2">
-                            <Link key={name} href={path} className="text-base leading-6 opacity-75">
-                                {name}
+                        navRoutes?.map(({ title, path, isFooterItem }) => isFooterItem && <div key={title} className="px-5 py-2">
+                            <Link key={title} href={path} className="text-base leading-6 opacity-75">
+                                {title}
                             </Link>
                         </div>)
                     }
