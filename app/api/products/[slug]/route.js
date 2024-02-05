@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import dataJson from "./../data.json";
-export const GET = (req, { params }) => {
+export const GET = async (req, { params }) => {
   const { slug: pSlug } = params;
   const data = dataJson.find(({ slug }) => pSlug === slug);
   if (data) {
