@@ -1,10 +1,10 @@
 "use client"
-import Input from "../components/form-elements/Input";
 import { useForm } from "react-hook-form";
 import Button from "../smallUI/Button";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { createNewOrder } from "@/utils/CRUD/orders";
+import Input from "../form-elements/Input";
 
 const CheckoutForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()

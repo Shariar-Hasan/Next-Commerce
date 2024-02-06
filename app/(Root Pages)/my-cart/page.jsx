@@ -1,7 +1,6 @@
 
-// import CartSummeryBox from '@/app/components/layers/CartSummeryBox'
-// import CartTable from '@/app/components/layers/CartTable'
-// import Heading from '@/app/components/smallUI/Heading'
+import CartSummeryBox from '@/app/components/layers/CartSummeryBox'
+import CartTable from '@/app/components/layers/CartTable'
 import Heading from '@/app/components/smallUI/Heading'
 import React from 'react'
 
