@@ -7,7 +7,6 @@ export const getProducts = async () => {
     },
   });
   const result = await res.json();
-  console.log({result})
   return result;
 };
 export const getSingleProduct = async (slug) => {
