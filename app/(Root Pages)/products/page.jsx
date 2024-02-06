@@ -1,10 +1,11 @@
 import ProductCard from '@/app/components/cards/ProductCard'
 import Heading from '@/app/components/smallUI/Heading'
 import { getProducts } from '@/utils/CRUD/products'
+import { BASE_URL } from '@/utils/contants'
 import React from 'react'
 
 const Products = async () => {
-
+  if (!BASE_URL) return null
   const result = await getProducts()
   const products = result.data
   console.log(products)
