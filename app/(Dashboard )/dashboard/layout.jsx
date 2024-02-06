@@ -1,4 +1,4 @@
-import DashboardLayertempalate from "../components/layers/DashboardLayertempalate";
+import DashboardLayertempalate from "@/app/components/layers/DashboardLayertempalate";
 
 
 const DashboardLayout = ({ children }) => {
