@@ -10,8 +10,8 @@ const ProductsSection = async () => {
     console.log("another",{BASE_URL})
     const result = await getProducts()
     console.log({ result })
-    const products = result?.data?.slice(0, 5)
-    // const products = [] 
+    // const products = result?.data?.slice(0, 5)
+    const products = [] 
     console.log({ BASE_URL, products })
     return (
         <div className="max-w-7xl mx-auto my-10 ">
