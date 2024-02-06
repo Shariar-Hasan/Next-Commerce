@@ -5,13 +5,8 @@ import Link from "next/link"
 import { BASE_URL } from "@/utils/contants"
 
 const ProductsSection = async () => {
-    console.log({BASE_URL})
-    if (!BASE_URL) return null
-    console.log("another",{BASE_URL})
     const result = await getProducts()
-    console.log({ result })
-    // const products = result?.data?.slice(0, 5)
-    const products = [] 
+    const products = result?.data?.slice(0, 5)
     console.log({ BASE_URL, products })
     return (
         <div className="max-w-7xl mx-auto my-10 ">
