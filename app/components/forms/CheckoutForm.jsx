@@ -1,5 +1,5 @@
 "use client"
-import Input from "@/components/form-elements/Input";
+import Input from "../components/form-elements/Input";
 import { useForm } from "react-hook-form";
 import Button from "../smallUI/Button";
 import { useSelector } from "react-redux";

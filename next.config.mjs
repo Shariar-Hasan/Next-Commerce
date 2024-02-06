@@ -10,13 +10,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    typedRoutes: true,
-  },
-  compiler: {
-    styledComponents: true,
-  },
-  reactStrictMode: false,
 };
 
 export default nextConfig;

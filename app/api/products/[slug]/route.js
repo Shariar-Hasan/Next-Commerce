@@ -4,15 +4,20 @@ export const GET = async (req, { params }) => {
   const { slug: pSlug } = params;
   const data = dataJson.find(({ slug }) => pSlug === slug);
   if (data) {
-    return NextResponse.json({
-      success: true,
-      data: data,
-    });
-  }
-  else{
-    return NextResponse.json({
-      success: false,
-      message: "Product not found"
-    })
+    return new Response(
+      JSON.stringify({
+        success: true,
+        data: data,
+      }),
+      { status: 200 }
+    );
+  } else {
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: "Product not found",
+      }),
+      { status: 200 }
+    );
   }
 };

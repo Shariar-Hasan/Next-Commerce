@@ -121,7 +121,5 @@ export const dashboardRoutes = [
     icon: <FaCartPlus />,
   },
 ];
-const isLocal = false;
-export const rootURL = isLocal
-  ? "http://localhost:3000"
-  : "https://next-ecommerce-pro.vercel.app";
+const isLocal = true;
+export const BASE_URL = process.env.NEXT_PUBLIC_FETCH_URL;

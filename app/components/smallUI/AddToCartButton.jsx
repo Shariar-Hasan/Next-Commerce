@@ -1,6 +1,6 @@
 "use client"
 import { FaCartPlus, FaMinus, FaPlus } from 'react-icons/fa';
-import Button from '@/components/smallUI/Button';
+import Button from '@/app/components/smallUI/Button';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/slices/cartSlice';
 import toast from 'react-hot-toast';

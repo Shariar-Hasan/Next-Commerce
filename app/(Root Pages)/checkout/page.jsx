@@ -1,7 +1,7 @@
 
-import CheckoutForm from "@/components/forms/CheckoutForm";
-import CartTable from "@/components/layers/CartTable";
-import Heading from "@/components/smallUI/Heading";
+import CheckoutForm from "../components/forms/CheckoutForm";
+import CartTable from "../components/layers/CartTable";
+import Heading from "../components/smallUI/Heading";
 
 const Checkout = () => {
 

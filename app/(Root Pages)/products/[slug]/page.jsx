@@ -2,12 +2,14 @@ import parse from 'html-react-parser';
 import { getSingleProduct } from "@/utils/CRUD/products"
 import { numToBdt } from "@/utils/converters"
 import Image from "next/image"
-import AddToCartButton from '@/components/smallUI/AddToCartButton';
+import AddToCartButton from '@/app/components/smallUI/AddToCartButton';
 
 const ProductDetails = async ({ params }) => {
     const { slug } = params
     const result = await getSingleProduct(slug)
+       
     const product = result.data
+    console.log({ product })
     const {
         title,
         description = "",

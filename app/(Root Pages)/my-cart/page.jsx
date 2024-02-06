@@ -1,7 +1,8 @@
 
-import CartSummeryBox from '@/components/layers/CartSummeryBox'
-import CartTable from '@/components/layers/CartTable'
-import Heading from '@/components/smallUI/Heading'
+// import CartSummeryBox from '@/app/components/layers/CartSummeryBox'
+// import CartTable from '@/app/components/layers/CartTable'
+// import Heading from '@/app/components/smallUI/Heading'
+import Heading from '@/app/components/smallUI/Heading'
 import React from 'react'
 
 const MyCart = () => {

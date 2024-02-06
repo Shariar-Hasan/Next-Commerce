@@ -2,11 +2,15 @@ import { getProducts } from "@/utils/CRUD/products"
 import ProductCard from "../cards/ProductCard"
 import Heading from "../smallUI/Heading"
 import Link from "next/link"
+import { BASE_URL } from "@/utils/contants"
 
 const ProductsSection = async () => {
-
+    if (BASE_URL === undefined) return null
     const result = await getProducts()
+    console.log({ result })
     const products = result?.data?.slice(0, 5)
+    // const products = [] 
+    console.log({ BASE_URL, products })
     return (
         <div className="max-w-7xl mx-auto my-10 ">
             <Heading >

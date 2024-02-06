@@ -1,8 +1,8 @@
 "use client"
 
-import Button from "@/components/smallUI/Button"
-import LinkButton from "@/components/smallUI/LinkButton"
 import { useRouter } from "next/navigation"
+import LinkButton from "./components/smallUI/LinkButton"
+import Button from "./components/smallUI/Button"
 
 const error = ({ error, reset }) => {
   const router = useRouter()

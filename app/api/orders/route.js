@@ -6,8 +6,8 @@ export const POST = async (req) => {
   // logic for services and database
   data.createdAt = Date.now();
   data.id = Date.now();
-  return NextResponse.json({
+  return new Response(JSON.stringify({
     success: true,
     data: data,
-  });
+  }), { status: 200 });
 };

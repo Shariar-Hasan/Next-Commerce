@@ -1,4 +1,4 @@
-import LoginRegsiterForm from '@/components/forms/LoginRegsiterForm'
+import LoginRegsiterForm from '@/app/components/forms/LoginRegsiterForm'
 import { companyInfo } from '@/utils/contants'
 // future work : meta data set
 const Login = () => {

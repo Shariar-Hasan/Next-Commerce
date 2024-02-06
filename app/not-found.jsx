@@ -1,7 +1,6 @@
 "use client"
-import Button from "@/components/smallUI/Button"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
+import Button from "./components/smallUI/Button"
 
 const NotFound = () => {
     const router = useRouter()

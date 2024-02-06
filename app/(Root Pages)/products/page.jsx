@@ -1,5 +1,5 @@
-import ProductCard from '@/components/cards/ProductCard'
-import Heading from '@/components/smallUI/Heading'
+import ProductCard from '@/app/components/cards/ProductCard'
+import Heading from '@/app/components/smallUI/Heading'
 import { getProducts } from '@/utils/CRUD/products'
 import React from 'react'
 
