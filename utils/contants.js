@@ -121,5 +121,4 @@ export const dashboardRoutes = [
     icon: <FaCartPlus />,
   },
 ];
-const isLocal = true;
 export const BASE_URL = process.env.NEXT_PUBLIC_FETCH_URL;

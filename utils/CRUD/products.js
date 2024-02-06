@@ -1,6 +1,7 @@
 import { BASE_URL } from "../contants";
 
 export const getProducts = async () => {
+  if (!BASE_URL) return null
   const res = await fetch(`${BASE_URL}/api/products/`, {
     next: {
       revalidate: 3600,
